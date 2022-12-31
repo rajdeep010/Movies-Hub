@@ -34,6 +34,38 @@ body.dark {
     --search-bar: #191964;
 }
 
+.btn {
+    display: inline-block;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: larger;
+    color: var(--search-text);
+    box-shadow: var(--skill-box-shadow);
+    background-color: var(--search-bar);
+    text-decoration: none;
+    border: 2px solid var(--nav-color);
+}
+
+.btn span {
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    background: var(--nav-color);
+    color: rgb(255, 255, 255);
+    margin: 0.4rem;
+}
+
+.btn:hover {
+    color: var(--search-bar);
+    background-color: var(--nav-color);
+}
+
+.btn:hover span {
+    color: var(--nav-color);
+    background-color: var(--search-bar);
+}
+
 /* -----****** Container Section Starts Here ******----- */
 
 
@@ -70,7 +102,6 @@ body.dark {
 }
 
 .container .rating-fav-trailer>div:hover {
-    scale: 1.3;
     cursor: pointer;
 }
 
@@ -109,6 +140,24 @@ body.dark {
 .container .description .rating-fav-trailer .rating {
     font-weight: 430;
     color: #070736;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .description .rating-fav-trailer .rating h3{
+    border: 2px solid var(--nav-color);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    color: var(--search-bar);
+    background: var(--nav-color);
+}
+
+.container .description .rating-fav-trailer .rating h3:hover{
+    color: var(--nav-bar);
+    background: var(--search-bar);
+    border: 2px solid var(--nav-color);
 }
 
 .container .description .rating-fav-trailer .trailer i {
@@ -183,5 +232,21 @@ body.dark {
 @media (max-width: 750px) {
     .container .inner .image-box img {
         display: none;
+    }
+
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .btn{
+        font-size: medium;
+        padding: 0.5rem;
+    }
+
+    .btn span{
+        font-size: 0.8rem;
     }
 }

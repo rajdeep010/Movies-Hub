@@ -72,14 +72,12 @@
                         <div class="rating-fav-trailer">
 
                             <div class="rating">
-                                <%= parseFloat(movie.vote_average).toFixed(1) %>
+                                <h3><%= parseFloat(movie.vote_average).toFixed(1) %></h3>
                             </div>
 
 
-                            <a class="trailer" data-title="Play Trailer" target="_blank"
-                                href="https://www.youtube.com/watch?v=<%= key %>">
-                                <i class="fas fa-play"></i>
-                            </a>
+                            <a class="btn" target="_blank" href="https://www.youtube.com/watch?v=<%= key %>">Play Trailer <span
+                                class="fas fa-play"></span></a>
 
                         </div>
 
