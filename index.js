@@ -1,10 +1,20 @@
-require('dotenv').config();
+// require('dotenv').config()
 
-const fetch = require('node-fetch')
-const express = require('express')
-const bodyParser = require('body-parser')
-const moment = require('moment');
-const { response } = require('express');
+// const fetch = require('node-fetch')
+
+// const express = require('express')
+// const bodyParser = require('body-parser')
+// const moment = require('moment');
+// const { response } = require('express');
+
+
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
+
+import express from 'express'
+import bodyParser from 'body-parser'
+import moment from 'moment'
+import fetch from 'node-fetch'
 
 const app = express()
 
@@ -41,6 +51,7 @@ app.get('/', (req, res) => {
             console.log(`Error caught home ${error}`)
         })
 })
+
 
 // ----*** Popular Movies *** ---
 app.get('/popular', (req, res) => {
