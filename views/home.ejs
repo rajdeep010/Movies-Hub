@@ -27,35 +27,39 @@
 
                 <div class="container">
 
-                    <% for(let i = 0; i < movies.length; i++) { %>
+                    <% if(movies) { %> 
 
-                        <div class="box">
+                        <% for(let i = 0; i < movies.length; i++) { %>
 
-                            <div class="image-box" data="<%= movies[i].id %>">
-                                <img src="https://image.tmdb.org/t/p/original/<%= movies[i].poster_path %>" alt="">
+                            <div class="box">
+    
+                                <div class="image-box" data="<%= movies[i].id %>">
+                                    <img src="https://image.tmdb.org/t/p/original/<%= movies[i].poster_path %>" alt="">
+                                </div>
+    
+                                <div class="fav-name-rating">
+    
+                                    <div class="myfav" data="<%= movies[i].id %>">
+                                        <!-- <i class="fas fa-heart heart"></i> -->
+                                    </div>
+    
+                                    <div class="name">
+                                        <span>
+                                            <%= moment(movies[i].release_date).format('DD MMMM YYYY') %>
+                                        </span>
+                                    </div>
+    
+                                    <div class="rating">
+                                        <%= parseFloat(movies[i].vote_average).toFixed(1) %>
+                                    </div>
+    
+                                </div>
+    
                             </div>
-
-                            <div class="fav-name-rating">
-
-                                <div class="myfav" data="<%= movies[i].id %>">
-                                    <!-- <i class="fas fa-heart heart"></i> -->
-                                </div>
-
-                                <div class="name">
-                                    <span>
-                                        <%= moment(movies[i].release_date).format('DD MMMM YYYY') %>
-                                    </span>
-                                </div>
-
-                                <div class="rating">
-                                    <%= parseFloat(movies[i].vote_average).toFixed(1) %>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+    
                         <% } %>
+
+                    <% } %>
 
             </section>
 
