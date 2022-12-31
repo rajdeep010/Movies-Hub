@@ -135,13 +135,6 @@ app.get('/upcoming', (req, res) => {
         })
 })
 
-app.get('/movie', (req, res) => {
-
-    res.render('movie', {
-        title: "Movies Hub"
-    })
-})
-
 
 app.get('/search/:value', (req, res) => {
 
@@ -225,10 +218,6 @@ app.get('/movie/:id', (req, res) => {
             console.log(`Error caught ${error}`)
         })
 
-})
-
-app.get('/sample', (req, res) => {
-    res.render('sample')
 })
 
 app.listen(port, () => {
