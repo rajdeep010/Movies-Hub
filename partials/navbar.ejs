@@ -62,9 +62,10 @@
         if(e.key === 'Enter')
         {
             let value = input.value
-            console.log(value)
+            // console.log(value)
 
-            location.href = `/search/${value}`
+            if(value !== '')
+                location.href = `/search/${value}`
         }
     })
 </script>
