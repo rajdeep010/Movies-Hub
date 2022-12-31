@@ -150,8 +150,6 @@ app.get('/search/:value', (req, res) => {
         })
         .then((movies) => {
 
-            // console.log(movies)
-
             res.render('home', {
                 title: 'Movies Hub',
                 movies: movies.results,
@@ -223,5 +221,6 @@ app.get('/movie/:id', (req, res) => {
 })
 
 app.listen(port, () => {
+    console.log(KEY)
     console.log(`Server is up & running on port ${port}`)
 })
